@@ -45,9 +45,10 @@
 
 - 모든 SFT 학습 데이터 구성 방법은 [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)과 동일하게 사용하였습니다.
 - Stanford Alpaca 학습 데이터에서 40%는 input 값을 할당하여 학습을 진행하고 나머지 60%는 input을 빈값으로 할당하여 구성
-- 총 36,650 건의 instruction 데이터 중 랜덤 샘플링하여, 21,990 건에 대해서는 input을 삭제
   > input: str, optional context or input for the task. For example, when the instruction is "Summarize the following article", the input is the article. Around 40% of the examples have an input.
   
+<br>
+
 ```
 ### Instruction:
 {instruction}
@@ -65,7 +66,7 @@
 ### Response:
 ```
 
-- 학습 데이터 샘플은 아래와 같음
+- 총 36,650 건의 instruction 데이터 중 랜덤 샘플링하여, 21,990 건에 대해서는 input을 삭제하였으며 샘플은 아래와 같음
 ```
 {
     "instruction": "속인주의, 속지주의에 대한 정확한 설명 부탁드립니다.",
