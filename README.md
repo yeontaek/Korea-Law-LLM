@@ -34,9 +34,29 @@
 
 ## SFT(supervised-fine-tuning)
 
-### 데이터 구성
+### 학습 데이터 구성
 
-- 학습 데이터 구성 방법은 
+- 모든 SFT 학습 데이터 구성 방법은 [stanford alpaca](https://github.com/tatsu-lab/stanford_alpaca)과 동일하게 사용하였습니다.
+- Stanford Alpaca의 학습 데이터 중 40%는 input 값을 입력하여 학습을 진행
+  > input: str, optional context or input for the task. For example, when the instruction is "Summarize the following article", the input is the article. Around 40% of the examples have an input.
+-
+
+```
+### Instruction:
+{instruction}
+
+### Input:
+{input}
+
+### Response:
+```
+
+```
+### Instruction:
+{instruction}
+
+### Response:
+```
 
 ### 학습 
 - 모든 모델 학습은 A100 80GB 4대로 학습을 진행
