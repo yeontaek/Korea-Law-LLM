@@ -85,10 +85,10 @@
 - 모든 모델 학습은 A100 80GB 4대로 학습을 진행
 - 학습에 사용한 코드는 https://github.com/tloen/alpaca-lora,  https://github.com/Beomi/KoAlpaca 을 참고하여 작성하였습니다.
 - Law-Polyglot-12.8B LoRa 8bit 학습 
-<img src="assets/train_lora_8bit.png" width="65%" >
+<img src="assets/train_lora_8bit.png" width="100%" >
 
 - Law-Polyglot-12.8B QLoRa 4bit 학습 
-<img src="assets/train_lora_8bit.png" width="65%" >
+<img src="assets/train_lora_8bit.png" width="100%" >
 
 
 
