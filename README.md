@@ -16,10 +16,7 @@
 해당 모델의 모든 실험 Backbone Model은 [Polyglot-ko-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b) 사용하여 진행하였습니다.
 
 1. Polyglot-ko 12.8B LoRa 8bit -> 🤗 [Law-Polyglot-12.8B LoRa 8bit]()
-    - 데이터셋 v1:
 2. Polyglot-ko 12.8B QLoRa 4bit -> 🤗 [Law-Polyglot-12.8B QLoRa 4bit]()
-    - 데이터셋 v1:
-
 
 ## 모델 실행 결과 예시
 
@@ -88,7 +85,7 @@
 <img src="assets/train_lora_8bit.png" width="100%" >
 
 - Law-Polyglot-12.8B QLoRa 4bit 학습 
-<img src="assets/train_lora_8bit.png" width="100%" >
+<img src="assets/train_qlora_4bit.png" width="100%" >
 
 
 
