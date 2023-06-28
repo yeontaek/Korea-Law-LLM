@@ -16,7 +16,9 @@
 해당 모델의 모든 실험 Backbone Model은 [Polyglot-ko-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b) 사용하여 진행하였습니다.
 
 1. Polyglot-ko 12.8B LoRa 8bit -> 🤗 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora)
+   - 데이터셋 v1: 36,650 건 법률 instruction 데이터
 2. Polyglot-ko 12.8B QLoRa 4bit -> 🤗 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora)
+   - 데이터셋 v1: 36,650 건 법률 instruction 데이터
 
 ## 모델 실행 결과 예시
 
