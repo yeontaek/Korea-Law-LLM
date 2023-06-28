@@ -1,8 +1,8 @@
 
 
 ## Update Logs
-- 🤗Polyglot-ko 12.8B 기반 Law-Polyglot-12.8B QLoRa 4bit 모델 공개 예정
-- 🤗Polyglot-ko 12.8B 기반 Law-Polyglot-12.8B LoRa 8bit 모델 공개 예정
+- 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora) 모델 공개
+- 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora) 모델 공개
 
 ---
 <br>
@@ -15,8 +15,8 @@
 
 해당 모델의 모든 실험 Backbone Model은 [Polyglot-ko-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b) 사용하여 진행하였습니다.
 
-1. Polyglot-ko 12.8B LoRa 8bit -> 🤗 [Law-Polyglot-12.8B LoRa 8bit]()
-2. Polyglot-ko 12.8B QLoRa 4bit -> 🤗 [Law-Polyglot-12.8B QLoRa 4bit]()
+1. Polyglot-ko 12.8B LoRa 8bit -> 🤗 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora)
+2. Polyglot-ko 12.8B QLoRa 4bit -> 🤗 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora)
 
 ## 모델 실행 결과 예시
 
