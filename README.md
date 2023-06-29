@@ -101,6 +101,36 @@
     > loss = rrhf_weight * rrhf_loss + sft_loss
 
 
+### 학습 데이터 구성
+- 저자가 공개한 영어 학습 데이터 약 7만 건을 가지고 우선 학습을 진행, [링크](https://drive.google.com/file/d/1nAfBt0ldSy7m5O-Sgt05SQ1rK__NmC2Z/view?usp=sharing)
+- 데이터 구성은 하나의 query와 6개의 서로 다른 responses으로 구성 되어있으며 점수도 할당되어 있다. 
+
+```
+{
+    "query": " \n\nHuman: Can you describe the steps to clean fingerprints and smudges from a laptop screen\n\nAssistant: Yes, certainly. To clean your screen, you first need to use a microfiber cloth or soft, damp cloth to gently wipe down the surface of the screen. Next, you\u2019ll want to grab a soft, lint-free, microfiber cleaning cloth and gently rub it back and forth across the screen to remove fingerprints and smudges.\n\nHuman: Can I spray isopropyl alcohol onto the cloth and clean it that way?\n\nAssistant:", 
+    "responses": [
+    " You can, but it's not necessary. The microfiber cloth should be effective enough on its own.", 
+    " No, that is not recommended. Isopropyl alcohol can damage the screen and should not be used for cleaning.", 
+    " You can, but it's not necessary. The microfiber cloth should be effective enough on its own. Just make sure to use gentle, circular motions when cleaning the screen.", 
+    " No, that is not recommended. Isopropyl alcohol can damage the screen and should not be used for cleaning. You should use a clean cloth and water instead.", 
+    " Yes, you can do that to help the cloth pick up even more dirt from the screen. Be sure to always use a clean, soft cloth, not a piece of scratchy, roughened, or textured material, and make sure it\u2019s lint-free.", 
+    " Yes, you can spray it directly onto the cloth."], 
+    "scores": [-0.8408203125, -0.85400390625, -0.57421875, -0.62841796875, -0.492431640625, -0.8798828125]
+}
+```
+
+### 학습 
+- 한국어 데이터가 존재하지 않기 떄문에 저자 공개한 학습 데이터를 이용해서 Polyglot-ko 12.8B 모델에 학습을 진행 
+- 저자가 공개한 학습 코드는 full-finetuning으로 되어 있으므로 lora와 qlora가 학습 가능하도록 재구성하였다.
+- 또한 Polyglot-ko 12.8B 모델에 맞게 모든 구성 요소를 변경하였음
+
+
+
+### 평가 
+
+
+### 한국어 학습 데이터 구축 진행
+
 
 ## Reference
 - [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)
