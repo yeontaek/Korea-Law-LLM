@@ -125,15 +125,17 @@
 - 한국어 데이터가 존재하지 않기 떄문에 저자 공개한 학습 데이터를 이용해서 Polyglot-ko 12.8B 모델에 학습을 진행 
 - 저자가 공개한 학습 코드는 full-finetuning으로 되어 있으므로 lora와 qlora가 학습 가능하도록 재구성하였다.
 - 또한 Polyglot-ko 12.8B 모델에 맞게 모든 구성 요소를 변경하였음
+- 학습은 A100 80GB 4대로 학습을 진행 중(2023.06.29~)
 
 
 
 
 ## 3. TO-DO
-### 모델 평가 
-
-### RRHF 한국어 학습 데이터 구축
-
+- [ ] 모델 평가 
+- [ ] RRHF 한국어 학습 데이터 구축
+- [ ] RRHF 한국어 학습 데이터로 모델 학습
+- [ ] 전체 학습 데이터 정리
+- [ ] SFT + RRHF 결합하여 학습
 
 ## 4. Reference
 - [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)
