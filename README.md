@@ -1,8 +1,10 @@
 
 
 ## Update Logs
-- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora) 모델 공개
-- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora) 모델 공개
+- 2023.07 🤗Polyglot-ko 12.8B 기반 [Polyglot-12.8B+RRHF(KR)+LoRa]() 모델 공개 예정
+- 2023.07 🤗Polyglot-ko 12.8B 기반 [Polyglot-12.8B+RRHF(EN)+LoRa]() 모델 공개 예정
+- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B+LoRa](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora) 모델 공개
+- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B+QLoRa](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora) 모델 공개
 
 ---
 <br>
@@ -126,10 +128,10 @@
 
 
 
-### 평가 
+### 모델 평가 
 
 
-### 한국어 학습 데이터 구축 진행
+### RRHF 한국어 학습 데이터 구축
 
 
 ## Reference
