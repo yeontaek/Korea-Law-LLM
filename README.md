@@ -40,7 +40,7 @@
 다만, 피고소인의 경우 자동차등록번호까지 정확히 알고서 자동차를 운전했다고 하기보다는 자동차소유자의 성명만 알고서 운전한 것이 대부분이어서 자동차소유자의 성명만 알고서 타인의 자동차를 운전한 자는 도로교통법위반(주정차위반)죄로는 처벌될 수 있습니다.
 ```
 
-## SFT(supervised-fine-tuning)
+## 1. SFT(supervised-fine-tuning)
 
 ### 학습 데이터 구성
 
@@ -93,7 +93,7 @@
 
 
 
-## RRHF(Rank Response from Human Feedback)
+## 2. RRHF(Rank Response from Human Feedback)
 - [paper](https://arxiv.org/pdf/2304.05302v1.pdf)에서 제안된 RRHF 방법을 활용하여 모델을 학습 및 평가를 진행하고자 한다.
 - 해당 논문에서는 RLHF의 강화학습 대신에 RRHF(Rank Response from Human Feedback)방법을 제안하였는데 방법은 아래와 같다.
   - 사전에 dataset을 만들어서 Supervised Learning으로 접근하는데. 각 query 대해 여러 Response를 생성하고 해당 Response들의 점수를 측정
@@ -128,13 +128,14 @@
 
 
 
-### 모델 평가 
 
+## 3. TO-DO
+### 모델 평가 
 
 ### RRHF 한국어 학습 데이터 구축
 
 
-## Reference
+## 4. Reference
 - [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)
 - [Alpaca LoRa](https://github.com/tloen/alpaca-lora)
 - [KoAlpaca](https://github.com/Beomi/KoAlpaca)
