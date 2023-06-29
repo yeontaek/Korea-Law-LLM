@@ -1,19 +1,19 @@
 
 
 ## Update Logs
-- 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora) 모델 공개
-- 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora) 모델 공개
+- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora) 모델 공개
+- 2023.06 🤗Polyglot-ko 12.8B 기반 [Law-Polyglot-12.8B QLoRa 4bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-qlora) 모델 공개
 
 ---
 <br>
 
 # Korea Law Large Language Model
 
-- 한국어 법률 데이터 기반으로 개발한 한국어 Large Language Model (LLM) 입니다.
+- 한국어 법률 데이터 기반으로 개발한 한국어 Large Language Model (LLM) 
 
 ## Polyglot-ko 12.8B
 
-해당 모델의 모든 실험 Backbone Model은 [Polyglot-ko-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b) 사용하여 진행하였습니다.
+해당 모델의 모든 실험 Backbone Model은 [Polyglot-ko-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b) 사용하여 진행하였다.
 
 1. Polyglot-ko 12.8B LoRa 8bit -> 🤗 [Law-Polyglot-12.8B LoRa 8bit](https://huggingface.co/yeontaek/Law-polyglot-12.8b-lora)
    - 데이터셋 v1: 36,650 건 법률 instruction 데이터
@@ -42,7 +42,7 @@
 
 ### 학습 데이터 구성
 
-- 모든 SFT 학습 데이터 구성 방법은 [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)과 동일하게 사용하였습니다.
+- 모든 SFT 학습 데이터 구성 방법은 [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)과 동일하게 사용하였다.
 - Stanford Alpaca 학습 데이터에서 40%는 input 값을 할당하여 학습을 진행하고 나머지 60%는 input을 빈값으로 할당하여 구성
   > input: str, optional context or input for the task. For example, when the instruction is "Summarize the following article", the input is the article. Around 40% of the examples have an input.
   
@@ -82,7 +82,7 @@
 
 ### 학습 
 - 모든 모델 학습은 A100 80GB 4대로 학습을 진행
-- 학습에 사용한 코드는 https://github.com/tloen/alpaca-lora,  https://github.com/Beomi/KoAlpaca 을 참고하여 작성하였습니다.
+- 학습에 사용한 코드는 https://github.com/tloen/alpaca-lora,  https://github.com/Beomi/KoAlpaca 을 참고하여 작성
 - Law-Polyglot-12.8B LoRa 8bit 학습 
 <img src="assets/train_lora_8bit.png" width="100%" >
 
@@ -92,9 +92,20 @@
 
 
 ## RRHF(Rank Response from Human Feedback)
+- [paper](https://arxiv.org/pdf/2304.05302v1.pdf)에서 제안된 RRHF 방법을 활용하여 모델을 학습 및 평가를 진행하고자 한다.
+- 해당 논문에서는 RLHF의 강화학습 대신에 RRHF(Rank Response from Human Feedback)방법을 제안하였는데 방법은 아래와 같다.
+  - 사전에 dataset을 만들어서 Supervised Learning으로 접근하는데. 각 query 대해 여러 Response를 생성하고 해당 Response들의 점수를 측정
+  - SFT Loss : 각 질의의 응답 중 가장 점수가 높은 best response에 대해서는 SFT Loss를 측정 
+  - Rank Loss : 각 질의의 응답 중 모델이 예측한 순위와 학습 데이터에 있는 정답 순위를 가지고 Rank Loss를 측정 
+  - 최종 Loss는 아래와 같이 구성된다. 
+    > loss = rrhf_weight * rrhf_loss + sft_loss
+
+
 
 ## Reference
 - [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)
 - [Alpaca LoRa](https://github.com/tloen/alpaca-lora)
 - [KoAlpaca](https://github.com/Beomi/KoAlpaca)
 - [EleutherAI](https://github.com/EleutherAI)
+- [Wombat 🐻‍❄️: from RLHF to RRHF](https://github.com/GanjinZero/RRHF)
+- [RRHF: Rank Responses to Align Language Models with Human Feedback without tears](https://arxiv.org/pdf/2304.05302v1.pdf)
