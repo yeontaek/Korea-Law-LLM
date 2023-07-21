@@ -134,6 +134,21 @@
    - 데이터셋 : 76,256개 모두 사용
 
 
+### 성능 평가
+
+- instruct-eval을 참고하여 영어 모델에서 RRHF 성능 측정을 위해 MMNU(Massive Multitask Language Understanding) 점수 측정
+- GPT-4와 ChatGPT는 instruct-eval에서 측정한 점수를 참조 
+- 이후 모델에서는 직접 MMLU 평균 점수를 측정
+
+| 모델                            | size     | MMLU     | 기타                | 
+|-------------------------------|----------|----------|-------------------|
+| GPT-4                         | ?        | 86.4     |                   |
+| ChatGPT                       | ?        | 70.0	    |                   |
+ | --------                      | -------- | -------- | --------          |
+| facebook/opt-2.7b             | 2.7b     | 25.68    |                   |
+| decapoda-research/llama-7b-hf | 7b       | 36.79    |                   |
+ | meta-llama/Llama-2-7b-hf      | 7b   | 45.97    |  |
+| meta-llama/Llama-2-7b-chat-hf | 7b   | 45.78    |  |
 
 ## 3. TO-DO
 - [ ] 모델 평가 
